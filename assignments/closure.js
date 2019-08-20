@@ -45,7 +45,10 @@ console.log(counter()); //3
 // It should have a `limit` parameter. Any counters we make with `counterMaker`
 
 const CounterMaker = (limit) => {
-
+  let count = 0;
+  return function() {
+  return ++count;
+  }
 };
 // will refuse to go over the limit, and start back at 1.
 
@@ -67,6 +70,9 @@ const counterFactory = () => {
 
 
 const counterTest = counterFactory();
-counterTest.increment();
-counterTest.decrement();
-
+console.log(counterTest.increment()); //1
+console.log(counterTest.increment()); //2
+console.log(counterTest.increment()); //3
+console.log(counterTest.decrement()); //2
+console.log(counterTest.decrement()); //1
+console.log(counterTest.decrement()); //0
