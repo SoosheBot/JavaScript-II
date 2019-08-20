@@ -4,28 +4,19 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
-function add(num1, num2){
-  return num1 + num2;
-}
-  console.log(add(9,7)); //16
 
-
-
+ 
+    function myHandle(twitter) { 
+      const firstName = 'Sooshe';
+      const lastName = 'Bot';
+      console.log(`My ${twitter} is ${firstName}${lastName}!`);
+    }
+    myHandle('Twitter handle');
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
 // ==== Challenge 2: Implement a "counter maker" function ====
-const counterMaker = () => {
-  let count = 0;
-  return function() {
-    return ++count;
-  }
-};
-  const counter = counterMaker();
-  console.log(counter()); //1
-  console.log(counter()) //2
-  console.log(counter()) //3
   // IMPLEMENTATION OF counterMaker:
   // 1- Declare a `count` variable with a value of 0. We will be mutating it, so declare it using `let`!
   // 2- Declare a function `counter`. It should increment and return `count`.
@@ -36,6 +27,19 @@ const counterMaker = () => {
 // Example usage: const myCounter = counterMaker();
 // myCounter(); // 1
 // myCounter(); // 2
+
+const counterMaker = () => {
+  let count = 0;
+  return function() {
+  return ++count;
+  }
+};
+
+const counter = counterMaker();
+console.log(counter()); //1
+console.log(counter()); //2
+console.log(counter()); //3
+
 
 // ==== Challenge 3: Make `counterMaker` more sophisticated ====
 // It should have a `limit` parameter. Any counters we make with `counterMaker`
