@@ -128,8 +128,16 @@ let runnerInfo = [];
 
 // Problem 2 - who didn't get great donations? name the runners whose donations were less than $20.
 // let donorRunners = []
+    let cheapDonors = [];
+    cheapDonors = runners.filter(function(donors) {
+    
+      return donors.donation < 20;
+    
+    });
+  
+  console.log(cheapDonors);
+  
 
-// money.donation < 20;
 
 // console.log
 // Problem 3 - filter out the companies whose name start with J and print the name of the runner and their company
