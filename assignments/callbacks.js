@@ -41,23 +41,22 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
-  return arr.length;
+  return cb(arr);
 }
-function itContains(x,arr)
-{
-  return arr.length(x);
-}
-console.log(getLength(items)); //4
+  const theLength = arr => {
+    return arr.length;
+  };
+console.log(getLength(items,theLength)); //4
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
-  // console.log(arr.pop())
-  return cb(arr[arr.length - 1]);
+  return cb(arr);
 }
 
-  last(items, function (e) {
-    console.log(e);
-  }); //Gum
+  function theLast(arr) {
+    return (arr[arr.length - 1]);
+  } 
+  console.log(last(items,theLast)); //Gum
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
@@ -91,7 +90,7 @@ function itContains(e,arr)
  }
 
 console.log(contains("yo-yo",items,itContains));
-//set item to e and array
+
 
 /* STRETCH PROBLEM */
 
