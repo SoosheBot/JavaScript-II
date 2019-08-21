@@ -56,6 +56,8 @@ function last(arr, cb) {
   function theLast(arr) {
     return (arr[arr.length - 1]);
   } 
+
+  //could also use .pop()
   console.log(last(items,theLast)); //Gum
 
 function sumNums(x, y, cb) {

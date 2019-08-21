@@ -43,14 +43,23 @@ console.log(counter()); //3
 
 // ==== Challenge 3: Make `counterMaker` more sophisticated ====
 // It should have a `limit` parameter. Any counters we make with `counterMaker`
-
-const CounterMaker = (limit) => {
-  let count = 0;
-  return function() {
-  return ++count;
-  }
-};
 // will refuse to go over the limit, and start back at 1.
+
+//could not figure this one out 
+
+const CounterMaker = () => {
+  let count = 0;
+    return function() {
+     return ++count;
+    };
+};
+
+
+// const test = CounterMaker();
+// console.log(test());
+// console.log(test());
+// console.log(test());
+
 
 // ==== Challenge 4: Create a counter function with an object that can increment and decrement ====
 const counterFactory = () => {
