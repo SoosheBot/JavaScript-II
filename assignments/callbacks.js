@@ -63,12 +63,19 @@ function multiplyNums(x, y, cb) {
 }
 console.log(multiplyNums(9,3)); //27
 
+
 function contains(item, list,cb) {
   // contains checks if an item is present inside of the given array/list.
-  // Pass true to the callback if it is, otherwise pass false. 
-  
+  return cb(item, list);
+  // Pass true to the callback if it is, otherwise pass false.  
 }
+function itContains(e,arr)
+ {
+   return arr.includes(e);
+ }
 
+console.log(contains("yo-yo",items,itContains));
+//set item to e and array
 
 /* STRETCH PROBLEM */
 
