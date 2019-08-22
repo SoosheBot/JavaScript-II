@@ -59,9 +59,6 @@ const CounterMaker = () => {
 
 };
 
-
-
-
 const test = CounterMaker();
 console.log(test());
 console.log(test());

@@ -86,8 +86,6 @@ let firstNamesAllCaps = [];
 // // ==== Challenge 3: Use .filter() ====
 // // The large shirts won't be available for the event due to an ordering issue. We need a filtered version of the runners array, containing only those runners with large sized shirts so they can choose a different size. This will be an array of objects.
 
-// //objective of this challenge is to print the first and last names of people who selected the "L" size shirt using the filter method
-
 let runnersLargeSizeShirt = [];
 
   runnersLargeSizeShirt = runners.filter(function(lrgShirtRunners) {
@@ -95,10 +93,6 @@ let runnersLargeSizeShirt = [];
     return lrgShirtRunners.shirt_size === "L"; 
   
   });
-
-  // runners.forEach(function (lrgShirtRunners) {
-  //   runnersLargeSizeShirt.push(`${lrgShirtRunners.first_name} ${lrgShirtRunners.last_name}`);
-  // });
 
 console.log(runnersLargeSizeShirt);
 
