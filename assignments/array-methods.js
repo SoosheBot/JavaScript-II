@@ -92,13 +92,13 @@ let runnersLargeSizeShirt = [];
 
   runnersLargeSizeShirt = runners.filter(function(lrgShirtRunners) {
     
-    return lrgShirtRunners.shirt_size == "L"; 
+    return lrgShirtRunners.shirt_size === "L"; 
   
   });
 
-  runners.forEach(function (lrgShirtRunners) {
-    runnersLargeSizeShirt.push(`${lrgShirtRunners.first_name} ${lrgShirtRunners.last_name}`);
-  });
+  // runners.forEach(function (lrgShirtRunners) {
+  //   runnersLargeSizeShirt.push(`${lrgShirtRunners.first_name} ${lrgShirtRunners.last_name}`);
+  // });
 
 console.log(runnersLargeSizeShirt);
 

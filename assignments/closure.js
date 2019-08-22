@@ -50,15 +50,25 @@ console.log(counter()); //3
 const CounterMaker = () => {
   let count = 0;
     return function() {
-     return ++count;
+      if (count >= 1) {
+        console.log("You have reached the upper limit. Resetting to 1")
+        count = 0;
+      }
+      return ++count;
     };
+
 };
 
 
-// const test = CounterMaker();
-// console.log(test());
-// console.log(test());
-// console.log(test());
+
+
+const test = CounterMaker();
+console.log(test());
+console.log(test());
+console.log(test());
+console.log(test());
+console.log(test());
+console.log(test());
 
 
 // ==== Challenge 4: Create a counter function with an object that can increment and decrement ====
